@@ -13,7 +13,7 @@ after_successs:
     - docker build -t sorin1333/multi-nginx ./nginx
     - docker build -t sorin1333/multi-server ./server
     - docker build -t sorin1333/multi-worker ./worker
-    # push to docker hub
+    # lodgin and push to docker hub
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     - docker push sorin1333/multi-client
     - docker push sorin1333/multi-nginx
